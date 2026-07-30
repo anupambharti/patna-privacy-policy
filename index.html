@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Patna: City Guide, the private-by-design iPhone guide to Patna, Bihar.">
+  <meta name="application-name" content="Patna: City Guide">
+  <meta name="author" content="Patna: City Guide">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#fffaf0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15110f" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Patna: City Guide">
+  <meta property="og:title" content="Privacy Policy — Patna: City Guide">
+  <meta property="og:description" content="How Patna: City Guide handles location, saved places and external services.">
+  <meta name="twitter:card" content="summary">
+  <title>Privacy Policy — Patna: City Guide</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper: #fffaf0;
+      --surface: #fffdf8;
+      --surface-warm: #f9ecd2;
+      --ink: #211a16;
+      --muted: #675d56;
+      --terracotta: #b63822;
+      --terracotta-deep: #8f2818;
+      --indigo: #203858;
+      --leaf: #376b49;
+      --mustard: #d8800b;
+      --line: rgba(32, 56, 88, 0.14);
+      --shadow: 0 24px 70px rgba(63, 40, 21, 0.09);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-synthesis: none;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 10% 2%, rgba(216, 128, 11, 0.10), transparent 28rem),
+        radial-gradient(circle at 92% 18%, rgba(55, 107, 73, 0.08), transparent 26rem),
+        var(--paper);
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.7;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--terracotta-deep);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      border-radius: 5px;
+      outline: 3px solid var(--mustard);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 18px;
+      top: 14px;
+      z-index: 20;
+      translate: 0 -180%;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--surface);
+      padding: 10px 16px;
+      font-weight: 750;
+      text-decoration: none;
+      transition: translate 160ms ease;
+    }
+
+    .skip-link:focus {
+      translate: 0;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--paper) 88%, transparent);
+      backdrop-filter: blur(18px) saturate(130%);
+      -webkit-backdrop-filter: blur(18px) saturate(130%);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: min(1100px, calc(100% - 40px));
+      min-height: 72px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--ink);
+      font-size: 0.97rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--terracotta);
+      box-shadow: 0 8px 18px rgba(182, 56, 34, 0.22);
+      color: #fff;
+      font-family: Georgia, serif;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .page-label {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--surface) 82%, transparent);
+      color: var(--muted);
+      padding: 7px 13px;
+      font-size: 0.78rem;
+      font-weight: 760;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    main {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 82px 0 108px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(250px, 0.7fr);
+      align-items: end;
+      gap: clamp(36px, 7vw, 92px);
+      padding-bottom: 66px;
+    }
+
+    .eyebrow {
+      color: var(--terracotta-deep);
+      font-size: 0.75rem;
+      font-weight: 850;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 13px 0 22px;
+      font-size: clamp(2.7rem, 7.2vw, 5.4rem);
+      font-weight: 850;
+      letter-spacing: -0.055em;
+      line-height: 0.98;
+    }
+
+    .lede {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2.2vw, 1.35rem);
+      line-height: 1.55;
+    }
+
+    .hero-note {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: color-mix(in srgb, var(--surface) 88%, transparent);
+      box-shadow: var(--shadow);
+      padding: 25px;
+    }
+
+    .hero-note strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--leaf);
+      font-size: 1.05rem;
+    }
+
+    .hero-note p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .madhubani-rule {
+      height: 16px;
+      margin: 0 0 54px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle, var(--terracotta) 0 2px, transparent 2.5px) 14px 6px / 28px 14px repeat-x,
+        linear-gradient(45deg, transparent 42%, var(--terracotta) 43% 48%, transparent 49%) 0 0 / 28px 14px repeat-x,
+        linear-gradient(-45deg, transparent 42%, var(--terracotta) 43% 48%, transparent 49%) 14px 0 / 28px 14px repeat-x;
+      opacity: 0.72;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 74px;
+    }
+
+    .summary-card {
+      min-height: 156px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--surface);
+      padding: 24px;
+    }
+
+    .summary-card:nth-child(2) {
+      background: color-mix(in srgb, var(--surface-warm) 72%, var(--surface));
+    }
+
+    .summary-card:nth-child(3) {
+      background: color-mix(in srgb, var(--leaf) 8%, var(--surface));
+    }
+
+    .summary-number {
+      display: grid;
+      width: 31px;
+      height: 31px;
+      margin-bottom: 16px;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--indigo);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 850;
+    }
+
+    .summary-card strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 720px);
+      align-items: start;
+      justify-content: space-between;
+      gap: clamp(40px, 8vw, 110px);
+    }
+
+    .contents {
+      position: sticky;
+      top: 104px;
+      border-left: 2px solid var(--line);
+      padding-left: 19px;
+    }
+
+    .contents h2 {
+      margin: 0 0 12px;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .contents ol {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contents a {
+      color: var(--muted);
+      font-size: 0.84rem;
+      text-decoration: none;
+    }
+
+    .contents a:hover {
+      color: var(--terracotta-deep);
+      text-decoration: underline;
+    }
+
+    .policy-section {
+      scroll-margin-top: 105px;
+      border-top: 1px solid var(--line);
+      padding: 36px 0 40px;
+    }
+
+    .policy-section:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr);
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 13px;
+    }
+
+    .section-number {
+      color: var(--terracotta-deep);
+      font-size: 0.77rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.35rem, 3vw, 1.75rem);
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+    }
+
+    .policy-section p,
+    .policy-section li {
+      color: var(--muted);
+    }
+
+    .policy-section p {
+      margin: 12px 0 0;
+    }
+
+    .policy-section ul {
+      margin: 15px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .policy-section li + li {
+      margin-top: 8px;
+    }
+
+    .plain-language {
+      margin-top: 22px;
+      border-left: 4px solid var(--mustard);
+      border-radius: 0 16px 16px 0;
+      background: color-mix(in srgb, var(--mustard) 9%, var(--surface));
+      padding: 16px 18px;
+    }
+
+    .plain-language strong {
+      color: var(--ink);
+    }
+
+    .plain-language p {
+      margin: 3px 0 0;
+      font-size: 0.92rem;
+    }
+
+    .contact-card {
+      margin-top: 18px;
+      border: 1px solid color-mix(in srgb, var(--terracotta) 30%, var(--line));
+      border-radius: 22px;
+      background: color-mix(in srgb, var(--terracotta) 6%, var(--surface));
+      padding: 24px;
+    }
+
+    .contact-card p {
+      margin: 0 0 16px;
+    }
+
+    .contact-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border-radius: 14px;
+      background: var(--terracotta-deep);
+      color: #fff;
+      padding: 11px 18px;
+      font-weight: 780;
+      text-decoration: none;
+    }
+
+    .contact-button:hover {
+      background: var(--terracotta);
+      text-decoration: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface-warm) 30%, var(--paper));
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: min(1100px, calc(100% - 40px));
+      min-height: 112px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .footer-place {
+      color: var(--terracotta-deep);
+      font-weight: 760;
+    }
+
+    @media (max-width: 820px) {
+      main {
+        padding-top: 62px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-note {
+        max-width: 520px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-card {
+        min-height: 0;
+      }
+
+      .policy-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contents {
+        position: static;
+        display: none;
+      }
+    }
+
+    @media (max-width: 540px) {
+      body {
+        font-size: 16px;
+      }
+
+      .nav,
+      main,
+      .footer-inner {
+        width: min(100% - 32px, 1100px);
+      }
+
+      .nav {
+        min-height: 64px;
+      }
+
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+      }
+
+      .page-label {
+        padding: 6px 10px;
+        font-size: 0.68rem;
+      }
+
+      main {
+        padding: 48px 0 78px;
+      }
+
+      .hero {
+        padding-bottom: 48px;
+      }
+
+      h1 {
+        font-size: clamp(2.65rem, 15vw, 4rem);
+      }
+
+      .madhubani-rule {
+        margin-bottom: 42px;
+      }
+
+      .summary-grid {
+        margin-bottom: 58px;
+      }
+
+      .section-heading {
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 9px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 26px 0;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #15110f;
+        --surface: #211b17;
+        --surface-warm: #2b2118;
+        --ink: #f8efe2;
+        --muted: #c1b6ad;
+        --terracotta: #ef7254;
+        --terracotta-deep: #ff8b6d;
+        --indigo: #7797c5;
+        --leaf: #75b388;
+        --mustard: #f0aa42;
+        --line: rgba(248, 239, 226, 0.14);
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+      }
+
+      .summary-number,
+      .contact-button {
+        color: #18110e;
+      }
+
+      .summary-number {
+        background: #9db6dd;
+      }
+
+      .contact-button {
+        background: #ff9a7e;
+      }
+
+      .contact-button:hover {
+        background: #ffb09a;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media print {
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        background: #fff;
+      }
+
+      .site-header,
+      .contents,
+      .summary-grid,
+      .madhubani-rule,
+      .contact-button {
+        display: none;
+      }
+
+      main {
+        width: 100%;
+        padding: 24px 0;
+      }
+
+      .hero {
+        display: block;
+        padding-bottom: 34px;
+      }
+
+      .hero-note {
+        margin-top: 22px;
+        box-shadow: none;
+      }
+
+      .policy-layout {
+        display: block;
+      }
+
+      .policy-section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy — Patna: City Guide",
+      "description": "Privacy Policy for Patna: City Guide.",
+      "dateModified": "2026-07-30",
+      "about": {
+        "@type": "MobileApplication",
+        "name": "Patna: City Guide",
+        "applicationCategory": "TravelApplication",
+        "operatingSystem": "iOS"
+      }
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to privacy policy</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Page navigation">
+      <a class="brand" href="#top" aria-label="Patna: City Guide privacy policy">
+        <span class="brand-mark" aria-hidden="true">प</span>
+        <span>Patna: City Guide</span>
+      </a>
+      <span class="page-label" aria-current="page">Privacy</span>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Effective 29 July 2026 · Updated 30 July 2026</p>
+        <h1 id="page-title">Privacy, in plain language.</h1>
+        <p class="lede">Patna: City Guide is built to work without an account, advertising, analytics or a developer-operated backend.</p>
+      </div>
+      <aside class="hero-note" aria-label="Privacy summary">
+        <strong>Private by design</strong>
+        <p>The app does not send personal data to the developer. Your saved places stay on your device, and location is optional.</p>
+      </aside>
+    </section>
+
+    <div class="madhubani-rule" aria-hidden="true"></div>
+
+    <section class="summary-grid" aria-label="Privacy highlights">
+      <article class="summary-card">
+        <span class="summary-number" aria-hidden="true">01</span>
+        <strong>No account or tracking</strong>
+        <p>No sign-in, advertising SDK, behavioral analytics or cross-app tracking.</p>
+      </article>
+      <article class="summary-card">
+        <span class="summary-number" aria-hidden="true">02</span>
+        <strong>Location is your choice</strong>
+        <p>It is requested only when you choose a feature that needs it.</p>
+      </article>
+      <article class="summary-card">
+        <span class="summary-number" aria-hidden="true">03</span>
+        <strong>Saved activity stays local</strong>
+        <p>Favorites, visited places and onboarding status remain on your device.</p>
+      </article>
+    </section>
+
+    <div class="policy-layout">
+      <nav class="contents" aria-label="Privacy policy contents">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#collection">Data collection</a></li>
+          <li><a href="#location">Optional location</a></li>
+          <li><a href="#device">On-device information</a></li>
+          <li><a href="#external">External services</a></li>
+          <li><a href="#tracking">Sharing and tracking</a></li>
+          <li><a href="#choices">Your choices</a></li>
+          <li><a href="#children">Children</a></li>
+          <li><a href="#changes">Policy changes</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </nav>
+
+      <article aria-label="Privacy policy">
+        <section class="policy-section" id="scope">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">01</span>
+            <h2>Scope of this policy</h2>
+          </div>
+          <p>This policy explains how the iOS app <strong>Patna: City Guide</strong> handles information. It applies to the current app and to this privacy-policy page.</p>
+        </section>
+
+        <section class="policy-section" id="collection">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">02</span>
+            <h2>Data collection</h2>
+          </div>
+          <p>The developer does not collect or receive personal data through the app. The app has no user account, advertising, analytics SDK, developer-operated backend or in-app submission form.</p>
+          <p>This policy page does not include analytics, advertising, tracking scripts or cookies set by Patna: City Guide. When it is hosted by GitHub Pages, GitHub may process standard website-request information under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub General Privacy Statement</a>.</p>
+          <div class="plain-language">
+            <strong>In short</strong>
+            <p>There is no profile about you on our servers because the app does not operate a server that receives your app activity.</p>
+          </div>
+        </section>
+
+        <section class="policy-section" id="location">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">03</span>
+            <h2>Optional location access</h2>
+          </div>
+          <p>Location access is optional and is requested only after you tap <strong>Near Me</strong> in Explore or choose the location button in Atlas.</p>
+          <ul>
+            <li>Near Me uses a device location in memory to sort the app’s bundled places by distance.</li>
+            <li>Atlas uses a device location to recenter the map and show your position.</li>
+            <li>Patna: City Guide does not save your precise location, associate it with an identity or transmit it to the developer.</li>
+            <li>Every curated place and category remains available if you do not grant location access.</li>
+          </ul>
+          <p>Apple provides the underlying Core Location and Apple Maps services. You can deny access when prompted or change permission later in iOS Settings.</p>
+        </section>
+
+        <section class="policy-section" id="device">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">04</span>
+            <h2>Information stored on your device</h2>
+          </div>
+          <p>Favorites, visited-place status and onboarding completion are stored in the app’s private storage on your device. They are used only to provide those app features. They are not synced to an account or sent to the developer.</p>
+          <p>You can change favorite and visited status in the app. Deleting the app removes this locally stored information, subject to the normal behavior of iOS device backups managed by you or Apple.</p>
+        </section>
+
+        <section class="policy-section" id="external">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">05</span>
+            <h2>Apple Maps and external services</h2>
+          </div>
+          <p>The Atlas embeds Apple Maps, so live map imagery and points of interest may require an internet connection. When you choose directions or a nearby search, the request opens in Apple Maps. When you choose an official source or phone number, iOS may open a website or system app.</p>
+          <p>Those third-party services may process information such as your request, device or network information under their own policies. Patna: City Guide does not receive your resulting Apple Maps, website or call activity. Review <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple’s Privacy Policy</a> for information about Apple’s services.</p>
+        </section>
+
+        <section class="policy-section" id="tracking">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">06</span>
+            <h2>Sharing, selling, tracking and retention</h2>
+          </div>
+          <p>Because the developer does not receive personal data through the app, the developer does not sell it, share it, retain it on a server or use it to track you across apps or websites. The app does not include third-party advertising or analytics SDKs.</p>
+        </section>
+
+        <section class="policy-section" id="choices">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">07</span>
+            <h2>Your privacy choices</h2>
+          </div>
+          <ul>
+            <li>Use the complete guide without granting location access.</li>
+            <li>Review or change location permission in iOS Settings.</li>
+            <li>Change favorites and visited-place status inside the app.</li>
+            <li>Remove locally stored app information by deleting the app.</li>
+            <li>Choose whether to open Apple Maps, websites or phone links.</li>
+          </ul>
+          <p>There is no developer-held user account or personal-data record to access, export or delete.</p>
+        </section>
+
+        <section class="policy-section" id="children">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">08</span>
+            <h2>Children’s privacy</h2>
+          </div>
+          <p>Patna: City Guide is a general-audience travel guide. The developer does not knowingly collect personal information from children or from any other users.</p>
+        </section>
+
+        <section class="policy-section" id="changes">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">09</span>
+            <h2>Changes to this policy</h2>
+          </div>
+          <p>If a future app version introduces accounts, analytics, advertising, online submissions or another data practice, this page and the App Store privacy disclosure will be updated to reflect that change. The updated date at the top of this page indicates the latest revision.</p>
+        </section>
+
+        <section class="policy-section" id="contact">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">10</span>
+            <h2>Contact</h2>
+          </div>
+          <p>Questions about this privacy policy or the app’s data practices are welcome.</p>
+          <div class="contact-card">
+            <p><strong>Patna: City Guide privacy contact</strong><br>Email: <a href="mailto:admin@technoforbes.com">admin@technoforbes.com</a></p>
+            <p>If you email us, we receive your email address and the information you include. We use that correspondence only to respond to your request, investigate the matter and maintain necessary support records. Your email provider and ours process the message under their own terms. You may ask us to delete the correspondence when it is no longer needed.</p>
+            <a class="contact-button" href="mailto:admin@technoforbes.com?subject=Patna%3A%20City%20Guide%20Privacy">Email privacy contact</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Patna: City Guide · Privacy Policy</span>
+      <span class="footer-place">Made with care for Patna, Bihar</span>
+    </div>
+  </footer>
+</body>
+</html>
